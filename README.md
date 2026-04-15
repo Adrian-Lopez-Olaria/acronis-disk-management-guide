@@ -2,14 +2,14 @@
 
 ## 📑 Índice
 
-1. Introducción y punto de partida  
-2. Proceso de backup (copia de seguridad)  
-3. Evidencia del backup generado  
-4. Restauración del sistema  
-5. Clonado de disco  
-6. Herramientas adicionales: borrado seguro  
-7. Notas importantes  
-8. Aviso legal / responsabilidad  
+1. [Introducción y punto de partida](#-1-introducción-y-punto-de-partida)  
+2. [Proceso de backup (copia de seguridad)](#-2-proceso-de-backup-copia-de-seguridad)  
+3. [Evidencia del backup generado](#-3-evidencia-del-backup-generado)  
+4. [Restauración del sistema](#-4-restauración-del-sistema)  
+5. [Clonado de disco](#-5-clonado-de-disco)  
+6. [Herramientas adicionales: borrado seguro](#-6-herramientas-adicionales-borrado-seguro)  
+7. [Notas importantes](#-7-notas-importantes)  
+8. [Aviso legal / responsabilidad](#-8-aviso-legal--responsabilidad)  
 
 ---
 
