@@ -93,9 +93,7 @@ Después, indicamos el método de restauración. Para recuperar el sistema compl
 
 ![Método](assets/CAPTURA16.png)
 
-En el siguiente paso, seleccionamos el punto de restauración. Esto permite elegir el momento exacto del backup si existen varias copias:
-
-![Punto](assets/CAPTURA17.png)
+En el siguiente paso, seleccionamos el punto de restauración. Esto permite elegir el momento exacto del backup si existen varias copias.
 
 A continuación, seleccionamos qué elementos queremos restaurar, asegurándonos de incluir todas las particiones necesarias:
 
