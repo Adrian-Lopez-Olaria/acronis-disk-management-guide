@@ -17,6 +17,14 @@
 
 En esta guía se documenta el uso de **Acronis True Image** para realizar operaciones completas sobre discos: copia de seguridad, restauración, clonación y borrado seguro.
 
+Para darle un enfoque más realista, este laboratorio simula un escenario habitual en entornos empresariales:
+
+💼 **Una empresa dispone de un equipo con información crítica que necesita:**
+- Proteger los datos antes de cualquier operación  
+- Eliminar completamente la información del disco de forma segura  
+- Poder recuperar el sistema en caso necesario  
+- Garantizar continuidad mediante clonado  
+
 Todo el proceso se realiza mediante un **USB booteable**, lo que permite trabajar fuera del sistema operativo y garantizar la integridad de los datos.
 
 Antes de comenzar, es importante comprobar el estado de los discos desde el sistema.
@@ -32,6 +40,8 @@ Una vez verificado esto, reiniciamos el equipo y arrancamos desde el USB de Acro
 ---
 
 ## 💾 2. Proceso de backup (copia de seguridad)
+
+Antes de realizar cualquier acción sobre el disco, el primer paso es **proteger la información existente**.
 
 Una vez dentro del entorno de Acronis, accedemos a la opción de copia de seguridad desde el menú principal.
 
@@ -79,59 +89,13 @@ Este archivo contiene la imagen completa del sistema y será utilizado en proces
 
 ---
 
-## 🔄 4. Restauración del sistema
-
-Para restaurar el sistema, accedemos a la opción de recuperación desde el menú principal de Acronis:
-
-![Recovery](assets/CAPTURA14.png)
-
-A continuación, seleccionamos el archivo de backup que queremos utilizar. En este caso, elegimos el archivo previamente creado:
-
-![Seleccion backup](assets/CAPTURA15.png)
-
-Después, indicamos el método de restauración. Para recuperar el sistema completo, seleccionamos la opción de restaurar discos y particiones completas:
-
-![Método](assets/CAPTURA16.png)
-
-En el siguiente paso, seleccionamos el punto de restauración. Esto permite elegir el momento exacto del backup si existen varias copias.
-
-A continuación, seleccionamos qué elementos queremos restaurar, asegurándonos de incluir todas las particiones necesarias:
-
-![Contenido](assets/CAPTURA18.png)
-
-Por último, elegimos el disco destino donde se aplicará la restauración. Este paso es crítico, ya que se sobrescribirán todos los datos existentes en dicho disco:
-
-![Destino](assets/CAPTURA19.png)
-
----
-
-## 🔁 5. Clonado de disco
-
-Acronis también permite clonar discos completos de forma directa.
-
-Para ello, accedemos a la opción correspondiente desde el apartado de herramientas:
-
-![Clone](assets/CAPTURA20.png)
-
-Primero seleccionamos el disco de origen, que será el que contiene el sistema actual:
-
-![Origen](assets/CAPTURA21.png)
-
-Después, seleccionamos el disco de destino donde se copiarán los datos:
-
-![Destino](assets/CAPTURA22.png)
-
-A continuación, elegimos el tipo de clonación. En este caso, se selecciona la opción de reemplazar el disco en la misma máquina:
-
-![Método](assets/CAPTURA23.png)
-
-Finalmente, se muestra un resumen con los cambios que se aplicarán antes de ejecutar el proceso:
-
-![Resumen](assets/CAPTURA24.png)
-
----
-
 ## 🧹 6. Herramientas adicionales: borrado seguro
+
+Una vez asegurados los datos mediante el backup, en este laboratorio se simula el siguiente paso:
+
+⚠️ **La empresa necesita eliminar completamente el contenido del disco antes de retirarlo, reutilizarlo o desecharlo.**
+
+Aquí es donde entra el **borrado seguro**.
 
 Acronis incluye herramientas avanzadas para la eliminación segura de datos.
 
@@ -156,7 +120,66 @@ Algunos de los más utilizados son:
 - **VSITR** → estándar alemán  
 - **Fast** → borrado rápido (menos seguro)  
 
-Este tipo de borrado es útil para eliminar información sensible de forma definitiva.
+💡 Este tipo de borrado es fundamental porque:
+- Un formateo tradicional **NO elimina los datos**
+- La información puede recuperarse con herramientas forenses
+- Se evitan fugas de información sensible
+
+---
+
+## 🔄 4. Restauración del sistema
+
+Tras eliminar completamente el contenido del disco, el siguiente paso del laboratorio consiste en **recuperar el sistema a partir del backup generado previamente**.
+
+Para restaurar el sistema, accedemos a la opción de recuperación desde el menú principal de Acronis:
+
+![Recovery](assets/CAPTURA14.png)
+
+A continuación, seleccionamos el archivo de backup que queremos utilizar. En este caso, elegimos el archivo previamente creado:
+
+![Seleccion backup](assets/CAPTURA15.png)
+
+Después, indicamos el método de restauración. Para recuperar el sistema completo, seleccionamos la opción de restaurar discos y particiones completas:
+
+![Método](assets/CAPTURA16.png)
+
+En el siguiente paso, seleccionamos el punto de restauración si existiesen varias copias disponibles.
+
+A continuación, seleccionamos qué elementos queremos restaurar, asegurándonos de incluir todas las particiones necesarias:
+
+![Contenido](assets/CAPTURA18.png)
+
+Por último, elegimos el disco destino donde se aplicará la restauración. Este paso es crítico, ya que se sobrescribirán todos los datos existentes en dicho disco:
+
+![Destino](assets/CAPTURA19.png)
+
+---
+
+## 🔁 5. Clonado de disco
+
+Finalmente, como medida adicional de continuidad, se realiza un **clonado del disco restaurado**.
+
+Esto permite disponer de una copia operativa inmediata en caso de fallo físico del disco principal.
+
+Para ello, accedemos a la opción correspondiente desde el apartado de herramientas:
+
+![Clone](assets/CAPTURA20.png)
+
+Primero seleccionamos el disco de origen, que será el que contiene el sistema actual:
+
+![Origen](assets/CAPTURA21.png)
+
+Después, seleccionamos el disco de destino donde se copiarán los datos:
+
+![Destino](assets/CAPTURA22.png)
+
+A continuación, elegimos el tipo de clonación. En este caso, se selecciona la opción de reemplazar el disco en la misma máquina:
+
+![Método](assets/CAPTURA23.png)
+
+Finalmente, se muestra un resumen con los cambios que se aplicarán antes de ejecutar el proceso:
+
+![Resumen](assets/CAPTURA24.png)
 
 ---
 
@@ -189,11 +212,11 @@ Se recomienda realizar pruebas en entornos controlados antes de su uso en produc
 
 ## 📦 Resultado final
 
-Mediante este procedimiento se obtiene:
+Mediante este laboratorio se demuestra un flujo completo:
 
-- Copia completa del sistema  
-- Restauración funcional  
-- Clonado de discos  
-- Eliminación segura de datos  
+- Protección de datos mediante backup  
+- Eliminación segura de información  
+- Recuperación del sistema  
+- Continuidad operativa mediante clonado  
 
-Todo ello desde un entorno booteable con Acronis.
+Todo ello utilizando Acronis desde entorno booteable.
